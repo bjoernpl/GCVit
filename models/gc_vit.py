@@ -700,7 +700,7 @@ def gc_vit_xxtiny(pretrained=False, **kwargs):
                   drop_path_rate=0.2,
                   **kwargs)
     if pretrained:
-        model.load_state_dict(torch.load(pretrained))
+        model.load_state_dict(torch.load(pretrained)["state_dict"])
     return model
 
 
@@ -714,7 +714,7 @@ def gc_vit_xtiny(pretrained=False, **kwargs):
                   drop_path_rate=0.2,
                   **kwargs)
     if pretrained:
-        model.load_state_dict(torch.load(pretrained))
+        model.load_state_dict(torch.load(pretrained)["state_dict"])
     return model
 
 
@@ -728,7 +728,7 @@ def gc_vit_tiny(pretrained=False, **kwargs):
                   drop_path_rate=0.2,
                   **kwargs)
     if pretrained:
-        model.load_state_dict(torch.load(pretrained))
+        model.load_state_dict(torch.load(pretrained)["state_dict"])
     return model
 
 
@@ -743,7 +743,7 @@ def gc_vit_small(pretrained=False, **kwargs):
                   layer_scale=1e-5,
                   **kwargs)
     if pretrained:
-        model.load_state_dict(torch.load(pretrained))
+        model.load_state_dict(torch.load(pretrained)["state_dict"])
     return model
 
 
@@ -758,5 +758,5 @@ def gc_vit_base(pretrained=False, **kwargs):
                   layer_scale=1e-5,
                   **kwargs)
     if pretrained:
-        model.load_state_dict(torch.load(pretrained))
+        model.load_state_dict(torch.load(pretrained)["state_dict"])
     return model
